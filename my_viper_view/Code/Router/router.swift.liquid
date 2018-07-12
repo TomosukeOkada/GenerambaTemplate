@@ -11,7 +11,7 @@ import UIKit
 class {{ module_info.name }}Router: {{ module_info.name }}Wireframe {
 
     weak var viewController: UIViewController?
-    weak var view: UIView
+    weak var view: UIView?
 
     static func assembleModule(viewController: UIViewController) -> UIView {
         let view = {{ module_info.name }}View()
