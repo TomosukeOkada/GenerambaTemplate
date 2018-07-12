@@ -3,7 +3,11 @@ Xcode用コードジェネレータ[Generamba](https://github.com/rambler-digita
 現在、VIPERモジュール用とMVPのPresentation層用の２つがあります。  
 VIPERの命名や構成は[こちら](https://github.com/pedrohperalta/Articles-iOS-VIPER)に沿っています。
 
-## my_viper(VIPERモジュール生成)
+## my_viper_viewController(VIPERモジュール(UIViewController)生成) ← Add Xcode9.4 support.
+Contract, View, Presenter, Interactor, Routerを生成します。  
+詳細は中身を見てください:stuck_out_tongue_winking_eye:
+
+## my_viper_view(VIPERモジュール(UIView)生成) ← Add.
 Contract, View, Presenter, Interactor, Routerを生成します。  
 詳細は中身を見てください:stuck_out_tongue_winking_eye:
 
@@ -18,9 +22,10 @@ View, Presenter, Builder, Wireframeを生成します。
 ```
 ### Templates
 catalogs:
-- 'https://github.com/Yaruki00/GenerambaTemplate'
+- 'https://github.com/TomosukeOkada/GenerambaTemplate'
 templates:
-- {name: my_viper} # 使いたいテンプレートを選択
+- {name: my_viper_viewController} # 使いたいテンプレートを選択
+- {name: my_viper_view} # 使いたいテンプレートを選択
 - {name: my_presentation} # 使いたいテンプレートを選択
 ```
 
@@ -29,13 +34,14 @@ templates:
 
 # 使い方(ファイル)
 1) プロジェクトのルートディレクトリで`generamba setup`
-2) このリポジトリの`my_viper`または`my_presentation`ディレクトリを適当な場所に配置
+2) このリポジトリの`my_viper_viewController`、`my_viper_view`または`my_presentation`ディレクトリを適当な場所に配置
 3) `Rambafile`のテンプレートの部分を以下のように変更
 
 ```
 ### Templates
 templates:
-- {name: my_viper, local: '/絶対パス/my_viper/'} # 使いたいテンプレートを選択
+- {name: my_viper_viewController, local: '/絶対パス/my_viper_viewController/'} # 使いたいテンプレートを選択
+- {name: my_viper_view, local: '/絶対パス/my_viper_view/'} # 使いたいテンプレートを選択
 - {name: my_presentation, local: '/絶対パス/my_presentation/'} # 使いたいテンプレートを選択
 ```
 

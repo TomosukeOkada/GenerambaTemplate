@@ -10,9 +10,9 @@ import UIKit
 
 // MARK: - vars and life cycle
 class {{ module_info.name }}ViewController: UIViewController {
-    
+
     var presenter: {{ module_info.name }}Presentation!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -20,5 +20,5 @@ class {{ module_info.name }}ViewController: UIViewController {
 
 
 // MARK: - {{module_info.name}}View
-extension {{ module_info.name }}ViewController: {{module_info.name}}View {
+extension {{ module_info.name }}ViewController: {{module_info.name}}ViewInterface {
 }

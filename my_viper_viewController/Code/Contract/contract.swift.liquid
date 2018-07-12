@@ -8,29 +8,29 @@
 
 import UIKit
 
-protocol {{ module_info.name }}View: class {
+protocol {{ module_info.name }}ViewInterface: class {
     var presenter: {{ module_info.name }}Presentation! { get set }
-    
+
 }
 
 protocol {{ module_info.name }}Presentation: class {
-    weak var view: {{ module_info.name }}View? { get set }
+    var view: {{ module_info.name }}ViewInterface? { get set }
     var interactor: {{ module_info.name }}UseCase! { get set }
     var router: {{ module_info.name }}Wireframe! { get set }
-    
+
 }
 
 protocol {{ module_info.name }}InteractorOutput: class {
-    
+
 }
 
 protocol {{ module_info.name }}UseCase: class {
-    weak var output: {{ module_info.name }}InteractorOutput? { get set }
-    
+    var output: {{ module_info.name }}InteractorOutput? { get set }
+
 }
 
 protocol {{ module_info.name }}Wireframe: class {
-    weak var viewController: UIViewController? { get set }
-    
+    var viewController: UIViewController? { get set }
+
     static func assembleModule() -> UIViewController
 }

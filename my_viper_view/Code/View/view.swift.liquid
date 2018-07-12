@@ -1,0 +1,27 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+// MARK: - vars and Initialize
+class {{ module_info.name }}View: UIView {
+
+    var presenter: {{ module_info.name }}Presentation!
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+}
+
+// MARK: - {{module_info.name}}ViewInterface
+extension {{ module_info.name }}View: {{module_info.name}}ViewInterface {
+}

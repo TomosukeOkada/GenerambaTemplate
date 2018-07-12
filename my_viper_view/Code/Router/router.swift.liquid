@@ -7,25 +7,27 @@
 //
 
 class {{ module_info.name }}Router: {{ module_info.name }}Wireframe {
-    
+
     weak var viewController: UIViewController?
-    
-    static func assembleModule() -> UIViewController {
-        let view = {{ module_info.name }}ViewController.instantiate()
+    weak var view: UIView
+
+    static func assembleModule(viewController: UIViewController) -> UIView {
+        let view = {{ module_info.name }}View()
         let presenter = {{ module_info.name }}Presenter()
         let interactor = {{ module_info.name }}Interactor()
         let router = {{ module_info.name }}Router()
-	
+
         view.presenter = presenter
-	
+
         presenter.view = view
         presenter.interactor = interactor
         presenter.router = router
-	
+
         interactor.output = presenter
-	
-        router.viewController = view
-	
+
+        router.viewController = viewController
+        router.view = view
+
         return view
     }
 }

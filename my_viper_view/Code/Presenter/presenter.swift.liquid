@@ -7,8 +7,8 @@
 //
 
 class {{ module_info.name }}Presenter: {{ module_info.name }}Presentation {
-    
-    weak var view: {{ module_info.name }}View?
+
+    weak var view: {{ module_info.name }}ViewInterface?
     var interactor: {{ module_info.name }}UseCase!
     var router: {{ module_info.name }}Wireframe!
 }

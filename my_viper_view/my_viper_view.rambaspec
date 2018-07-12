@@ -1,7 +1,7 @@
 # Template information section
-name: "my_viper"
+name: "my_viper_view"
 summary: "from article sample"
-author: "Yuta Kawabe"
+author: "Tomosuke Okada"
 version: "0.1.0"
 license: "MIT"
 
@@ -12,7 +12,7 @@ code_files:
 - {name: Contract/Contract.swift, path: Code/Contract/contract.swift.liquid}
 
 # View layer
-- {name: View/ViewController.swift, path: Code/View/viewcontroller.swift.liquid}
+- {name: View/View.swift, path: Code/View/view.swift.liquid}
 
 # Presenter layer
 - {name: Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
