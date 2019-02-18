@@ -7,8 +7,6 @@
 //
 
 protocol {{ module_info.name }}PresenterInterface: class {
-    var view: {{ module_info.name }}ViewInterface? { get set }
-    var wireframe: {{ module_info.name }}WireframeInterface! { get set }
 }
 
 class {{ module_info.name }}Presenter: {{ module_info.name }}PresenterInterface {

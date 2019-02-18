@@ -11,13 +11,13 @@ import UIKit
 protocol TransitTo{{ module_info.name }}WireframeInterface: class {
     var viewController: UIViewController? { get set }
 
-    func pushTo{{ module_info.name }}()
+    func push{{ module_info.name }}()
     func present{{ module_info.name }}()
 }
 
 extension TransitTo{{ module_info.name }}WireframeInterface {
 
-    func pushTo{{ module_info.name }}() {
+    func push{{ module_info.name }}() {
         let vc = {{ module_info.name }}Builder().build()
         self.viewController?.navigationController?.pushViewController(vc, animated: true)
     }
