@@ -12,8 +12,8 @@ struct {{ module_info.name }}Builder {
 
     func build() -> UIViewController {
         let viewController = {{ module_info.name }}ViewController.instantiate()
-        let presenter = {{ module_info.name }}PresenterImpl()
-        let wireframe = {{ module_info.name }}WireframeImpl()
+        let presenter = {{ module_info.name }}Presenter()
+        let wireframe = {{ module_info.name }}Wireframe()
 
         viewController.presenter = presenter
 

@@ -6,13 +6,13 @@
 //  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
 //
 
-protocol {{ module_info.name }}Presenter: class {
-    var view: {{ module_info.name }}View? { get set }
-    var wireframe: {{ module_info.name }}Wireframe! { get set }
+protocol {{ module_info.name }}PresenterInterface: class {
+    var view: {{ module_info.name }}ViewInterface? { get set }
+    var wireframe: {{ module_info.name }}WireframeInterface! { get set }
 }
 
-class {{ module_info.name }}PresenterImpl: {{ module_info.name }}Presenter {
+class {{ module_info.name }}Presenter: {{ module_info.name }}PresenterInterface {
 
-    weak var view: {{ module_info.name }}View?
-    var wireframe: {{ module_info.name }}Wireframe!
+    weak var view: {{ module_info.name }}ViewInterface?
+    var wireframe: {{ module_info.name }}WireframeInterface!
 }

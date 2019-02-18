@@ -8,11 +8,31 @@
 
 import UIKit
 
-protocol {{ module_info.name }}Wireframe: class {
+protocol TransitTo{{ module_info.name }}WireframeInterface: class {
     var viewController: UIViewController? { get set }
+
+    func pushTo{{ module_info.name }}()
+    func present{{ module_info.name }}()
 }
 
-class {{ module_info.name }}WireframeImpl: {{ module_info.name }}Wireframe {
+extension TransitTo{{ module_info.name }}WireframeInterface {
+
+    func pushTo{{ module_info.name }}() {
+        let vc = {{ module_info.name }Builder().build()
+        self.viewController?.navigationController?.pushViewController(vc, animated: true)
+    }
+
+    func present{{ module_info.name }}() {
+        let vc = {{ module_info.name }Builder().build()
+        self.viewController?.present(vc, animated: true, completion: nil)
+    }
+}
+
+protocol {{ module_info.name }}WireframeInterface: class {
+
+}
+
+class {{ module_info.name }}Wireframe: {{ module_info.name }}WireframeInterface {
 
     weak var viewController: UIViewController?
 }
