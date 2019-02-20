@@ -9,8 +9,13 @@
 protocol {{ module_info.name }}PresenterInterface: class {
 }
 
-final class {{ module_info.name }}Presenter: {{ module_info.name }}PresenterInterface {
+// MARK: - vars
+final class {{ module_info.name }}Presenter {
 
     weak var view: {{ module_info.name }}ViewInterface?
     var wireframe: {{ module_info.name }}WireframeInterface!
+}
+
+// MARK: - {{ module_info.name }}PresenterInterface
+extension {{ module_info.name }}Presenter: {{ module_info.name }}PresenterInterface {
 }

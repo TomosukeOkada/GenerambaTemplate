@@ -11,16 +11,20 @@ import UIKit
 protocol {{ module_info.name }}ViewInterface: class {
 }
 
-// MARK: - vars and life cycle
+// MARK: - vars
 final class {{ module_info.name }}ViewController: UIViewController {
 
     var presenter: {{ module_info.name }}PresenterInterface!
+}
+
+// MARK: - LifeCycle
+extension {{ module_info.name }}ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
 
-// MARK: - {{ module_info.name }}View
+// MARK: - {{ module_info.name }}ViewInterface
 extension {{ module_info.name }}ViewController: {{ module_info.name }}ViewInterface {
 }
