@@ -18,12 +18,12 @@ protocol TransitTo{{ module_info.name }}WireframeInterface: class {
 extension TransitTo{{ module_info.name }}WireframeInterface {
 
     func push{{ module_info.name }}() {
-        let vc = {{ module_info.name }}Builder().build()
+        let vc = {{ module_info.name }}Builder.build()
         self.viewController?.navigationController?.pushViewController(vc, animated: true)
     }
 
     func present{{ module_info.name }}() {
-        let vc = {{ module_info.name }}Builder().build()
+        let vc = {{ module_info.name }}Builder.build()
         self.viewController?.present(vc, animated: true, completion: nil)
     }
 }
