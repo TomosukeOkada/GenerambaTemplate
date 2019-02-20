@@ -9,7 +9,7 @@
 protocol {{ module_info.name }}PresenterInterface: class {
 }
 
-class {{ module_info.name }}Presenter: {{ module_info.name }}PresenterInterface {
+final class {{ module_info.name }}Presenter: {{ module_info.name }}PresenterInterface {
 
     weak var view: {{ module_info.name }}ViewInterface?
     var wireframe: {{ module_info.name }}WireframeInterface!

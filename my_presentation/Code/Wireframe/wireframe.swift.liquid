@@ -32,7 +32,7 @@ protocol {{ module_info.name }}WireframeInterface: class {
 
 }
 
-class {{ module_info.name }}Wireframe: {{ module_info.name }}WireframeInterface {
+final class {{ module_info.name }}Wireframe: {{ module_info.name }}WireframeInterface {
 
     weak var viewController: UIViewController?
 }
