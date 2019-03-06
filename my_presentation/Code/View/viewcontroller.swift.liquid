@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol {{ module_info.name }}ViewInterface: class {
+protocol {{ module_info.name }}View: class {
 }
 
 // MARK: - vars
 final class {{ module_info.name }}ViewController: UIViewController {
 
-    var presenter: {{ module_info.name }}PresenterInterface!
+    var presenter: {{ module_info.name }}Presenter!
 }
 
 // MARK: - LifeCycle
@@ -25,6 +25,6 @@ extension {{ module_info.name }}ViewController {
     }
 }
 
-// MARK: - {{ module_info.name }}ViewInterface
-extension {{ module_info.name }}ViewController: {{ module_info.name }}ViewInterface {
+// MARK: - {{ module_info.name }}View
+extension {{ module_info.name }}ViewController: {{ module_info.name }}View {
 }

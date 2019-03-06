@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol TransitTo{{ module_info.name }}WireframeInterface: class {
+protocol TransitTo{{ module_info.name }}Wireframe: class {
     var viewController: UIViewController? { get set }
 
     func push{{ module_info.name }}()
     func present{{ module_info.name }}()
 }
 
-extension TransitTo{{ module_info.name }}WireframeInterface {
+extension TransitTo{{ module_info.name }}Wireframe {
 
     func push{{ module_info.name }}() {
         let vc = {{ module_info.name }}Builder.build()
@@ -28,7 +28,7 @@ extension TransitTo{{ module_info.name }}WireframeInterface {
     }
 }
 
-protocol {{ module_info.name }}WireframeInterface: class {
+protocol {{ module_info.name }}WireframeImpl: class {
 }
 
 final class {{ module_info.name }}Wireframe: {{ module_info.name }}WireframeInterface {

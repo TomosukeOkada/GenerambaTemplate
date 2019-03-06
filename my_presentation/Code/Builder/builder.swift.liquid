@@ -10,10 +10,12 @@ import UIKit
 
 final class {{ module_info.name }}Builder {
 
+    private init() {}
+
     static func build() -> UIViewController {
         let viewController = {{ module_info.name }}ViewController.instantiate()
-        let presenter = {{ module_info.name }}Presenter()
-        let wireframe = {{ module_info.name }}Wireframe()
+        let presenter = {{ module_info.name }}PresenterImpl()
+        let wireframe = {{ module_info.name }}WireframeImpl()
 
         viewController.presenter = presenter
 
