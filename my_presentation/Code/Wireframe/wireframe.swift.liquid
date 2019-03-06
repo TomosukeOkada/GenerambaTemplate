@@ -28,10 +28,10 @@ extension TransitTo{{ module_info.name }}Wireframe {
     }
 }
 
-protocol {{ module_info.name }}WireframeImpl: class {
+protocol {{ module_info.name }}Wireframe: class {
 }
 
-final class {{ module_info.name }}Wireframe: {{ module_info.name }}WireframeInterface {
+final class {{ module_info.name }}WireframeImpl: {{ module_info.name }}Wireframe {
 
     weak var viewController: UIViewController?
 }
